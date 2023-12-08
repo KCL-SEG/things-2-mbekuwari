@@ -11,6 +11,6 @@ class ThingForm(forms.ModelForm):
 
     # Customizing widget for description and quantity fields
     widgets = {
-        'description': forms.Textarea(attrs={'rows': 4, 'cols': 40}),
-        'quantity': forms.NumberInput(attrs={'min': 0, 'max': 100}),
+        'description': forms.Textarea(attrs={'rows': 5, 'cols': 40}),
+        'quantity': forms.NumberInput(),
     }
