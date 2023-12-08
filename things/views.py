@@ -2,6 +2,9 @@ from django.shortcuts import render
 from .forms import ThingForm
 from .models import Thing
 
+def home(request):
+    return render(request, 'home.html', {'form': form})
+
 
 def home(request):
     if request.method == 'POST':
@@ -13,4 +16,4 @@ def home(request):
     else:
         form = ThingForm()
 
-    return render(request, 'things/home.html', {'form': form})
+    return render(request, 'home.html', {'form': form})
